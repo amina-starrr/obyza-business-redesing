@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Orbyza Business</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">Orbyza</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero portfolio-hero">
+        <div class="hero-container">
+            <h1>Our Work</h1>
+            <p>Transformative digital projects that drive business growth.</p>
+        </div>
+    </section>
+
+    <section class="portfolio-filters">
+        <div class="container">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="seo">SEO</button>
+                <button class="filter-btn" data-filter="ppc">Google Ads</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio-grid-section">
+        <div class="container">
+            <div class="portfolio-grid" id="portfolioGrid">
+                <div class="portfolio-item seo">
+                    <div class="portfolio-image"></div>
+                    <div class="portfolio-info">
+                        <h3>E-Commerce SEO Growth</h3>
+                        <p>347% organic traffic increase for fashion retailer</p>
+                        <div class="tags"><span>SEO</span><span>E-Commerce</span></div>
+                    </div>
+                </div>
+                <div class="portfolio-item ppc">
+                    <div class="portfolio-image"></div>
+                    <div class="portfolio-info">
+                        <h3>Lead Generation PPC</h3>
+                        <p>8.2x ROAS for B2B SaaS company</p>
+                        <div class="tags"><span>Google Ads</span><span>B2B</span></div>
+                    </div>
+                </div>
+                <div class="portfolio-item web">
+                    <div class="portfolio-image"></div>
+                    <div class="portfolio-info">
+                        <h3>Corporate Website Redesign</h3>
+                        <p>Custom Next.js site with 2.3s load time</p>
+                        <div class="tags"><span>Web Development</span><span>Next.js</span></div>
+                    </div>
+                </div>
+                <div class="portfolio-item seo">
+                    <div class="portfolio-image"></div>
+                    <div class="portfolio-info">
+                        <h3>Local SEO Domination</h3>
+                        <p>#1 rankings for 28 keywords in competitive market</p>
+                        <div class="tags"><span>Local SEO</span><span>Service Business</span></div>
+                    </div>
+                </div>
+                <div class="portfolio-item web ppc">
+                    <div class="portfolio-image"></div>
+                    <div class="portfolio-info">
+                        <h3>Full-Funnel Optimization</h3>
+                        <p>SEO + PPC + Custom web app for SaaS</p>
+                        <div class="tags"><span>SEO</span><span>PPC</span><span>Web App</span></div>
+                    </div>
+                </div>
+                <div class="portfolio-item web">
+                    <div class="portfolio-image"></div>
+                    <div class="portfolio-info">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Headless Shopify + Next.js solution</p>
+                        <div class="tags"><span>E-Commerce</span><span>Headless</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Want Results Like These?</h2>
+            <p>Let's create your success story together.</p>
+            <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Orbyza</h3>
+                    <p>Leading digital agency for SEO, PPC, and web solutions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">All Services</a></li>
+                        <li><a href="seo.html">SEO</a></li>
+                        <li><a href="google-ads.html">Google Ads</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="privacy.html">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>info@orbyza.com</p>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p> 2026 Orbyza Business. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Portfolio Filter Functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update active filter
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    const filterValue = btn.getAttribute('data-filter');
+                    
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.8)';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
